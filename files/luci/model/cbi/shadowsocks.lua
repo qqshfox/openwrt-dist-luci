@@ -127,8 +127,8 @@ o = s:option(Value, "alias", translate("Alias(optional)"))
 o = s:option(Flag, "auth_enable", translate("Onetime Authentication"))
 o.rmempty = false
 
-o = s:option(Value, "server", translate("Server Address"))
-o.datatype = "ipaddr"
+o = s:option(DynamicList, "server", translate("Server Address"))
+o.datatype = "string"
 o.rmempty = false
 
 o = s:option(Value, "server_port", translate("Server Port"))
